@@ -1,0 +1,79 @@
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'maven-publish'
+    id 'java'
+}
+
+java {
+//    sourceCompatibility = JavaVersion.VERSION_1_8
+//    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+//configurations {
+//    ktlint
+//}
+
+dependencies {
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+    implementation "com.squareup.okhttp3:okhttp:$okhttpVersion"
+    implementation "org.bouncycastle:bcprov-jdk15on:$bouncycastleVersion"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    implementation "com.github.MixinNetwork.jjwt:jjwt-impl:$jjwtVersion"
+    implementation "com.github.MixinNetwork.jjwt:jjwt-gson:$jjwtVersion"
+    implementation "com.github.MixinNetwork.jjwt:jjwt-api:$jjwtVersion"
+
+    implementation "net.i2p.crypto:eddsa:$ed25519Version"
+    implementation "org.whispersystems:curve25519-java:$curve25519Version"
+//    ktlint "com.pinterest:ktlint:$ktlintVersion"
+
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test-junit'
+}
+
+//task ktlint(type: JavaExec, group: "verification") {
+//    description = "Check Kotlin code style."
+//    classpath = configurations.ktlint
+//    main = "com.pinterest.ktlint.Main"
+//    args "src/**/*.kt"
+//    // to generate report in checkstyle format prepend following args:
+//    // "--reporter=plain", "--reporter=checkstyle,output=${buildDir}/ktlint.xml"
+//    // to add a baseline to check against prepend following args:
+//    // "--baseline=ktlint-baseline.xml"
+//    // see https://github.com/pinterest/ktlint#usage for more
+//}
+//check.dependsOn ktlint
+
+//task ktlintFormat(type: JavaExec, group: "formatting") {
+//    description = "Fix Kotlin code style deviations."
+//    classpath = configurations.ktlint
+//    main = "com.pinterest.ktlint.Main"
+//    args "-F", "src/**/*.kt"
+//}
+//
+group = 'com.github.MixinNetwork1'
+version = 'v0.5.2'
+sourceCompatibility = 1.8
+//task writeNewPom  (){
+//    pom {
+//        project {
+//            inceptionYear '2021'
+//            licenses {
+//                license {
+//                    name 'The Apache Software License, Version 2.0'
+//                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    distribution 'Mixin Bot Api'
+//                }
+//            }
+//        }
+//    }.writeTo("$buildDir/pom.xml")
+//}
+
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository(url: "file://D://111")
+//        }
+//    }
+//}
