@@ -6,8 +6,8 @@ plugins {
 }
 
 java {
-//    sourceCompatibility = JavaVersion.VERSION_1_8
-//    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
 }
 
 //configurations {
@@ -52,9 +52,9 @@ dependencies {
 //    args "-F", "src/**/*.kt"
 //}
 //
-group = 'com.github.MixinNetwork1'
-version = 'v0.5.2'
-sourceCompatibility = 1.8
+//group = 'com.github.MixinNetwork1'
+//version = 'v0.5.2'
+//sourceCompatibility = 1.8
 //task writeNewPom  (){
 //    pom {
 //        project {
